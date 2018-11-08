@@ -16,4 +16,4 @@ final class ViewController: UIViewController {
 
 }
 
-extension ViewController: Transitionable {}
+extension ViewController: Viewable {}

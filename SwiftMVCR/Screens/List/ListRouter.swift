@@ -17,12 +17,12 @@ struct ListEntryEntity {
 }
 
 final class ListRouterInput {
-    func push(from: Transitionable, entryEntity: ListEntryEntity) {
+    func push(from: Viewable, entryEntity: ListEntryEntity) {
         let controller = ListViewController.configure(entryEntity: entryEntity)
         from.push(controller, animated: true)
     }
 
-    func present(from: Transitionable, entryEntity: ListEntryEntity) {
+    func present(from: Viewable, entryEntity: ListEntryEntity) {
         let controller = ListViewController.configure(entryEntity: entryEntity)
         from.present(controller, animated: true)
     }
@@ -30,9 +30,9 @@ final class ListRouterInput {
 
 final class ListRouterOutput: Routerable {
 
-    weak private(set) var view: Transitionable!
+    weak private(set) var view: Viewable!
 
-    init(_ view: Transitionable) {
+    init(_ view: Viewable) {
         self.view = view
     }
 

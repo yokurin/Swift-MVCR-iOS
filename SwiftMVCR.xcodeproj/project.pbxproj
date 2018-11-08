@@ -15,7 +15,7 @@
 		AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF579C2192E64E0071A253 /* ListViewController.swift */; };
 		AEBF579F2192E64E0071A253 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF579D2192E64E0071A253 /* ListViewController.xib */; };
 		AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A02192E6680071A253 /* ListRouter.swift */; };
-		AEBF57A32192E6CA0071A253 /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A22192E6CA0071A253 /* Transitionable.swift */; };
+		AEBF57A32192E6CA0071A253 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A22192E6CA0071A253 /* Viewable.swift */; };
 		AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A52192E8DB0071A253 /* Controllerable.swift */; };
 		AEBF57A82192F93D0071A253 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A72192F93D0071A253 /* Count.swift */; };
 		AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A92192F96A0071A253 /* Routerable.swift */; };
@@ -35,7 +35,7 @@
 		AEBF579C2192E64E0071A253 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		AEBF579D2192E64E0071A253 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		AEBF57A02192E6680071A253 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
-		AEBF57A22192E6CA0071A253 /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
+		AEBF57A22192E6CA0071A253 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
 		AEBF57A52192E8DB0071A253 /* Controllerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllerable.swift; sourceTree = "<group>"; };
 		AEBF57A72192F93D0071A253 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		AEBF57A92192F96A0071A253 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		AEBF57A42192E6D60071A253 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AEBF57A22192E6CA0071A253 /* Transitionable.swift */,
+				AEBF57A22192E6CA0071A253 /* Viewable.swift */,
 				AEBF57A52192E8DB0071A253 /* Controllerable.swift */,
 				AEBF57A92192F96A0071A253 /* Routerable.swift */,
 			);
@@ -224,7 +224,7 @@
 				AEBF578A2192C1B40071A253 /* ViewController.swift in Sources */,
 				AEBF57882192C1B30071A253 /* AppDelegate.swift in Sources */,
 				AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */,
-				AEBF57A32192E6CA0071A253 /* Transitionable.swift in Sources */,
+				AEBF57A32192E6CA0071A253 /* Viewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

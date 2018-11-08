@@ -1,5 +1,5 @@
 //
-//  Transitionable.swift
+//  Viewable.swift
 //  SwiftMVCR
 //
 //  Created by 林　翼 on 2018/11/07.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol Transitionable: AnyObject {
+protocol Viewable: AnyObject {
     func push(_ vc: UIViewController, animated: Bool)
     func present(_ vc: UIViewController, animated: Bool)
     func pop(animated: Bool)
@@ -17,7 +17,7 @@ protocol Transitionable: AnyObject {
     func dismiss(animated: Bool, completion: @escaping (() -> Void))
 }
 
-extension Transitionable where Self: UIViewController {
+extension Viewable where Self: UIViewController {
 
     func push(_ vc: UIViewController, animated: Bool) {
         self.navigationController?.pushViewController(vc, animated: animated)

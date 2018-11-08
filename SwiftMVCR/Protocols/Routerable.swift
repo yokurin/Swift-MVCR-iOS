@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Routerable {
-    var view: Transitionable! { get }
+    var view: Viewable! { get }
 
     func dismiss(animated: Bool, completion: @escaping (() -> Void))
     func pop(animated: Bool)

@@ -65,6 +65,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// MARK: Transitionable
-extension ListViewController: Transitionable {}
+// MARK: Viewable
+extension ListViewController: Viewable {}
 

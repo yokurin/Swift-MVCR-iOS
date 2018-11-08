@@ -36,4 +36,4 @@ final class DetailViewController: UIViewController, Controllerable {
 
 }
 
-extension DetailViewController: Transitionable {}
+extension DetailViewController: Viewable {}

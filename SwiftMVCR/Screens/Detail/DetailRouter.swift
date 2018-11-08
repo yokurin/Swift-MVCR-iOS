@@ -17,12 +17,12 @@ struct DetailEntryEntity {
 }
 
 final class DetailRouterInput {
-    func push(from: Transitionable, entryEntity: DetailEntryEntity) {
+    func push(from: Viewable, entryEntity: DetailEntryEntity) {
         let controller = DetailViewController.configure(entryEntity: entryEntity)
         from.push(controller, animated: true)
     }
 
-    func present(from: Transitionable, entryEntity: DetailEntryEntity) {
+    func present(from: Viewable, entryEntity: DetailEntryEntity) {
         let controller = DetailViewController.configure(entryEntity: entryEntity)
         from.present(controller, animated: true)
     }
@@ -30,9 +30,9 @@ final class DetailRouterInput {
 
 final class DetailRouterOutput: Routerable {
 
-    weak private(set) var view: Transitionable!
+    weak private(set) var view: Viewable!
 
-    init(_ view: Transitionable) {
+    init(_ view: Viewable) {
         self.view = view
     }
 
