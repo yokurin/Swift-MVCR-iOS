@@ -11,6 +11,7 @@ You can easy to know transitions of app.
 
 ### View (including UIViewController)
 View must implement Viewable. Viewable has Default Extension.  
+※ View of this case is not just View like UIView etc.
 
 ```swift
 
