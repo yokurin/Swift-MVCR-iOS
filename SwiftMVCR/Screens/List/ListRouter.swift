@@ -9,7 +9,7 @@
 import UIKit
 
 // Add Data for Enrty
-struct ListEntryEntity {
+struct ListEntryModel {
     let rowCount: Int
     init(rowCount: Int = 100) {
         self.rowCount = rowCount
@@ -17,13 +17,13 @@ struct ListEntryEntity {
 }
 
 final class ListRouterInput {
-    func push(from: Viewable, entryEntity: ListEntryEntity) {
-        let controller = ListViewController.configure(entryEntity: entryEntity)
+    func push(from: Viewable, entryModel: ListEntryModel) {
+        let controller = ListViewController.configure(entryModel: entryModel)
         from.push(controller, animated: true)
     }
 
-    func present(from: Viewable, entryEntity: ListEntryEntity) {
-        let controller = ListViewController.configure(entryEntity: entryEntity)
+    func present(from: Viewable, entryModel: ListEntryModel) {
+        let controller = ListViewController.configure(entryModel: entryModel)
         from.present(controller, animated: true)
     }
 }
@@ -36,7 +36,7 @@ final class ListRouterOutput: Routerable {
         self.view = view
     }
 
-    func transitionToDetail(entryEntity: DetailEntryEntity) {
-        DetailRouterInput().push(from: view, entryEntity: entryEntity)
+    func transitionToDetail(entryModel: DetailEntryModel) {
+        DetailRouterInput().push(from: view, entryModel: entryModel)
     }
 }

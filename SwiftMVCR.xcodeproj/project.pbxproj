@@ -77,7 +77,7 @@
 				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
 				AEBF57892192C1B40071A253 /* ViewController.swift */,
 				AEBF57A42192E6D60071A253 /* Protocols */,
-				AEBF579A2192E6070071A253 /* Entities */,
+				AEBF579A2192E6070071A253 /* Models */,
 				AEBF579B2192E6110071A253 /* Screens */,
 				AEBF57992192E5F20071A253 /* Resources */,
 			);
@@ -95,12 +95,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AEBF579A2192E6070071A253 /* Entities */ = {
+		AEBF579A2192E6070071A253 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				AEBF57A72192F93D0071A253 /* Count.swift */,
 			);
-			path = Entities;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AEBF579B2192E6110071A253 /* Screens */ = {

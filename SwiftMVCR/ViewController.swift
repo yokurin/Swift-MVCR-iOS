@@ -11,7 +11,7 @@ import UIKit
 final class ViewController: UIViewController {
 
     @IBAction func pushListScreen(_ sender: UIButton) {
-        ListRouterInput().push(from: self, entryEntity: ListEntryEntity(rowCount: 1000))
+        ListRouterInput().push(from: self, entryModel: ListEntryModel(rowCount: 1000))
     }
 
 }

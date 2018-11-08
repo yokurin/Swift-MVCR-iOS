@@ -9,7 +9,7 @@
 import UIKit
 
 // Add Data for Entry
-struct DetailEntryEntity {
+struct DetailEntryModel {
     var count: Count
     init(count: Count) {
         self.count = count
@@ -17,13 +17,13 @@ struct DetailEntryEntity {
 }
 
 final class DetailRouterInput {
-    func push(from: Viewable, entryEntity: DetailEntryEntity) {
-        let controller = DetailViewController.configure(entryEntity: entryEntity)
+    func push(from: Viewable, entryModel: DetailEntryModel) {
+        let controller = DetailViewController.configure(entryModel: entryModel)
         from.push(controller, animated: true)
     }
 
-    func present(from: Viewable, entryEntity: DetailEntryEntity) {
-        let controller = DetailViewController.configure(entryEntity: entryEntity)
+    func present(from: Viewable, entryModel: DetailEntryModel) {
+        let controller = DetailViewController.configure(entryModel: entryModel)
         from.present(controller, animated: true)
     }
 }
@@ -36,7 +36,7 @@ final class DetailRouterOutput: Routerable {
         self.view = view
     }
 
-    func transitionToDetail(entity: AnyObject) {
+    func transitionToDetail(Model: AnyObject) {
         let detail = UIViewController()
         view.push(detail, animated: true)
     }

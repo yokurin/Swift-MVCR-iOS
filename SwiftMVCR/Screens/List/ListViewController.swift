@@ -10,10 +10,10 @@ import UIKit
 
 final class ListViewController: UIViewController, Controllerable {
 
-    static func configure(entryEntity: ListEntryEntity) -> ListViewController {
+    static func configure(entryModel: ListEntryModel) -> ListViewController {
         let controller = ListViewController()
         controller.router = ListRouterOutput(controller)
-        controller.entryEntity = entryEntity
+        controller.entryModel = entryModel
         return controller
     }
 
@@ -25,15 +25,15 @@ final class ListViewController: UIViewController, Controllerable {
         }
     }
 
-    private var entryEntity: ListEntryEntity!
+    private var entryModel: ListEntryModel!
     private(set) var router: ListRouterOutput!
 
-    var detailEntity: DetailEntryEntity! // Using when backed from Detail
+    var detailModel: DetailEntryModel! // Using when backed from Detail
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let entity = detailEntity {
-            print("updated count: \(entity.count.value)")
+        if let Model = detailModel {
+            print("updated count: \(Model.count.value)")
         }
     }
 
@@ -50,7 +50,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entryEntity.rowCount
+        return entryModel.rowCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,7 +61,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        router.transitionToDetail(entryEntity: DetailEntryEntity(count: Count(value: indexPath.row)))
+        router.transitionToDetail(entryModel: DetailEntryModel(count: Count(value: indexPath.row)))
     }
 }
 

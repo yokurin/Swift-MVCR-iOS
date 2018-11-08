@@ -10,28 +10,28 @@ import UIKit
 
 final class DetailViewController: UIViewController, Controllerable {
 
-    static func configure(entryEntity: DetailEntryEntity) -> DetailViewController {
+    static func configure(entryModel: DetailEntryModel) -> DetailViewController {
         let controller = DetailViewController()
         controller.router = DetailRouterOutput(controller)
-        controller.entryEntity = entryEntity
+        controller.entryModel = entryModel
         return controller
     }
 
     @IBOutlet private weak var countDisplayLabel: UILabel!
 
-    private var entryEntity: DetailEntryEntity!
+    private var entryModel: DetailEntryModel!
     private(set) var router: DetailRouterOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        countDisplayLabel.text = "\(entryEntity.count.value)"
-        entryEntity.count.value += 10000
+        countDisplayLabel.text = "\(entryModel.count.value)"
+        entryModel.count.value += 10000
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         guard let listController = navigationController?.viewControllers.first(where: { $0 is ListViewController }) as? ListViewController else { return }
-        listController.detailEntity = entryEntity
+        listController.detailModel = entryModel
     }
 
 }
