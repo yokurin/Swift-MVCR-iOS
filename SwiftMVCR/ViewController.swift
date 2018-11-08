@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func pushListScreen(_ sender: UIButton) {
+        ListRouterInput().push(from: self, entryEntity: ListEntryEntity(rowCount: 1000))
     }
-
 
 }
 
+extension ViewController: Transitionable {}

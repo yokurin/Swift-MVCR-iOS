@@ -12,6 +12,16 @@
 		AEBF578D2192C1B40071A253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBF578B2192C1B40071A253 /* Main.storyboard */; };
 		AEBF578F2192C1B50071A253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBF578E2192C1B50071A253 /* Assets.xcassets */; };
 		AEBF57922192C1B50071A253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57902192C1B50071A253 /* LaunchScreen.storyboard */; };
+		AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF579C2192E64E0071A253 /* ListViewController.swift */; };
+		AEBF579F2192E64E0071A253 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF579D2192E64E0071A253 /* ListViewController.xib */; };
+		AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A02192E6680071A253 /* ListRouter.swift */; };
+		AEBF57A32192E6CA0071A253 /* Transitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A22192E6CA0071A253 /* Transitionable.swift */; };
+		AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A52192E8DB0071A253 /* Controllerable.swift */; };
+		AEBF57A82192F93D0071A253 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A72192F93D0071A253 /* Count.swift */; };
+		AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A92192F96A0071A253 /* Routerable.swift */; };
+		AEBF57AF219404B80071A253 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57AD219404B80071A253 /* DetailViewController.swift */; };
+		AEBF57B0219404B80071A253 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57AE219404B80071A253 /* DetailViewController.xib */; };
+		AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57B1219404CC0071A253 /* DetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		AEBF578E2192C1B50071A253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEBF57912192C1B50071A253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEBF57932192C1B50071A253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBF579C2192E64E0071A253 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		AEBF579D2192E64E0071A253 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		AEBF57A02192E6680071A253 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		AEBF57A22192E6CA0071A253 /* Transitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitionable.swift; sourceTree = "<group>"; };
+		AEBF57A52192E8DB0071A253 /* Controllerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllerable.swift; sourceTree = "<group>"; };
+		AEBF57A72192F93D0071A253 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
+		AEBF57A92192F96A0071A253 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
+		AEBF57AD219404B80071A253 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AEBF57AE219404B80071A253 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		AEBF57B1219404CC0071A253 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +76,70 @@
 			children = (
 				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
 				AEBF57892192C1B40071A253 /* ViewController.swift */,
+				AEBF57A42192E6D60071A253 /* Protocols */,
+				AEBF579A2192E6070071A253 /* Entities */,
+				AEBF579B2192E6110071A253 /* Screens */,
+				AEBF57992192E5F20071A253 /* Resources */,
+			);
+			path = SwiftMVCR;
+			sourceTree = "<group>";
+		};
+		AEBF57992192E5F20071A253 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				AEBF578B2192C1B40071A253 /* Main.storyboard */,
 				AEBF578E2192C1B50071A253 /* Assets.xcassets */,
 				AEBF57902192C1B50071A253 /* LaunchScreen.storyboard */,
 				AEBF57932192C1B50071A253 /* Info.plist */,
 			);
-			path = SwiftMVCR;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AEBF579A2192E6070071A253 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57A72192F93D0071A253 /* Count.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AEBF579B2192E6110071A253 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57AB2194047E0071A253 /* List */,
+				AEBF57AC2194048F0071A253 /* Detail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AEBF57A42192E6D60071A253 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57A22192E6CA0071A253 /* Transitionable.swift */,
+				AEBF57A52192E8DB0071A253 /* Controllerable.swift */,
+				AEBF57A92192F96A0071A253 /* Routerable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AEBF57AB2194047E0071A253 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF579C2192E64E0071A253 /* ListViewController.swift */,
+				AEBF57A02192E6680071A253 /* ListRouter.swift */,
+				AEBF579D2192E64E0071A253 /* ListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		AEBF57AC2194048F0071A253 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57AD219404B80071A253 /* DetailViewController.swift */,
+				AEBF57B1219404CC0071A253 /* DetailRouter.swift */,
+				AEBF57AE219404B80071A253 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +202,8 @@
 			files = (
 				AEBF57922192C1B50071A253 /* LaunchScreen.storyboard in Resources */,
 				AEBF578F2192C1B50071A253 /* Assets.xcassets in Resources */,
+				AEBF57B0219404B80071A253 /* DetailViewController.xib in Resources */,
+				AEBF579F2192E64E0071A253 /* ListViewController.xib in Resources */,
 				AEBF578D2192C1B40071A253 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBF57AF219404B80071A253 /* DetailViewController.swift in Sources */,
+				AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */,
+				AEBF57A82192F93D0071A253 /* Count.swift in Sources */,
+				AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */,
+				AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */,
+				AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */,
 				AEBF578A2192C1B40071A253 /* ViewController.swift in Sources */,
 				AEBF57882192C1B30071A253 /* AppDelegate.swift in Sources */,
+				AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */,
+				AEBF57A32192E6CA0071A253 /* Transitionable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BE69EUEJNJ;
-				INFOPLIST_FILE = SwiftMVCR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BE69EUEJNJ;
-				INFOPLIST_FILE = SwiftMVCR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
