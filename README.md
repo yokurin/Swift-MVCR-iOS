@@ -75,10 +75,10 @@ final class ViewController: UIViewController, Controllerable {
     
     ...
     
-    static func configure(entryEntity: EntryEntity) -> ViewController {
+    static func configure(entryModel: EntryModel) -> ViewController {
         let controller = ViewController()
         controller.router = RouterOutput(controller)
-        controller.entryEntity = entryEntity
+        controller.entryModel = entryModel
         return controller
     }
     private(set) var router: RouterOutput!
@@ -123,16 +123,16 @@ Example
 ```swift
 
 
-struct EntryEntity {}
+struct EntryModel {}
 
 final class RouterInput {
-    func push(from: Viewable, entryEntity: EntryEntity) {
-        let controller = ViewController.configure(entryEntity: entryEntity)
+    func push(from: Viewable, entryModel: EntryModel) {
+        let controller = ViewController.configure(entryModel: entryModel)
         from.push(controller, animated: true)
     }
 
-    func present(from: Viewable, entryEntity: EntryEntity) {
-        let controller = ViewController.configure(entryEntity: entryEntity)
+    func present(from: Viewable, entryModel: EntryModel) {
+        let controller = ViewController.configure(entryModel: entryModel)
         from.present(controller, animated: true)
     }
 }
@@ -145,8 +145,8 @@ final class RouterOutput: Routerable {
         self.view = view
     }
 
-    func transitionToOther(entryEntity: EntryEntity) {
-        OtherRouterInput().push(from: view, entryEntity: entryEntity)
+    func transitionToOther(entryModel: EntryModel) {
+        OtherRouterInput().push(from: view, entryModel: entryModel)
     }
 }
 ```
