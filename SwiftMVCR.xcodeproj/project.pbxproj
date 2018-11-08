@@ -22,6 +22,9 @@
 		AEBF57AF219404B80071A253 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57AD219404B80071A253 /* DetailViewController.swift */; };
 		AEBF57B0219404B80071A253 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57AE219404B80071A253 /* DetailViewController.xib */; };
 		AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57B1219404CC0071A253 /* DetailRouter.swift */; };
+		AEBF57B921944CB30071A253 /* CountDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57B821944CB30071A253 /* CountDisplayView.swift */; };
+		AEBF57BC21944CC40071A253 /* CountDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57BB21944CC30071A253 /* CountDisplayView.xib */; };
+		AEBF57BE21944D670071A253 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57BD21944D670071A253 /* XibView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		AEBF57AD219404B80071A253 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AEBF57AE219404B80071A253 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		AEBF57B1219404CC0071A253 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		AEBF57B821944CB30071A253 /* CountDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDisplayView.swift; sourceTree = "<group>"; };
+		AEBF57BB21944CC30071A253 /* CountDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDisplayView.xib; sourceTree = "<group>"; };
+		AEBF57BD21944D670071A253 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 				AEBF57892192C1B40071A253 /* ViewController.swift */,
 				AEBF57A42192E6D60071A253 /* Protocols */,
 				AEBF579A2192E6070071A253 /* Models */,
+				AEBF57B721944C5A0071A253 /* Views */,
 				AEBF579B2192E6110071A253 /* Screens */,
 				AEBF57992192E5F20071A253 /* Resources */,
 			);
@@ -142,6 +149,24 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		AEBF57B721944C5A0071A253 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57BD21944D670071A253 /* XibView.swift */,
+				AEBF57BA21944CB90071A253 /* CountDisplayView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AEBF57BA21944CB90071A253 /* CountDisplayView */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57B821944CB30071A253 /* CountDisplayView.swift */,
+				AEBF57BB21944CC30071A253 /* CountDisplayView.xib */,
+			);
+			path = CountDisplayView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +228,7 @@
 				AEBF57922192C1B50071A253 /* LaunchScreen.storyboard in Resources */,
 				AEBF578F2192C1B50071A253 /* Assets.xcassets in Resources */,
 				AEBF57B0219404B80071A253 /* DetailViewController.xib in Resources */,
+				AEBF57BC21944CC40071A253 /* CountDisplayView.xib in Resources */,
 				AEBF579F2192E64E0071A253 /* ListViewController.xib in Resources */,
 				AEBF578D2192C1B40071A253 /* Main.storyboard in Resources */,
 			);
@@ -219,11 +245,13 @@
 				AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */,
 				AEBF57A82192F93D0071A253 /* Count.swift in Sources */,
 				AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */,
+				AEBF57B921944CB30071A253 /* CountDisplayView.swift in Sources */,
 				AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */,
 				AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */,
 				AEBF578A2192C1B40071A253 /* ViewController.swift in Sources */,
 				AEBF57882192C1B30071A253 /* AppDelegate.swift in Sources */,
 				AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */,
+				AEBF57BE21944D670071A253 /* XibView.swift in Sources */,
 				AEBF57A32192E6CA0071A253 /* Viewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
