@@ -10,6 +10,25 @@ MVCR means Model, View, Controller, Router.
 You can easy to know transitions of app.  
 But, Not testable Architecture
 
+### Model
+Model must implement Modelable.
+```swift
+protocol Modelable {
+    // nop
+}
+```
+
+Example
+
+```swift
+
+final class Model: Modelable {
+    ...
+}
+
+```
+
+
 ### View (including UIViewController)
 View must implement Viewable. Viewable has Default Extension.  
 ※ View of this case is not just View like UIView etc.
@@ -64,7 +83,9 @@ Controller must implement Controllerable.
 
 ```swift
 protocol Controllerable {
+    associatedtype M: Modelable
     associatedtype R: Routerable
+    var model: M! { get }
     var router: R! { get }
 }
 ```
@@ -83,6 +104,7 @@ final class ViewController: UIViewController, Controllerable {
         controller.entryModel = entryModel
         return controller
     }
+    private(set) var model: ListModel!
     private(set) var router: RouterOutput!
     
     
@@ -103,21 +125,27 @@ Router must implement Routerable.
 
 ```swift
 protocol Routerable {
-    var view: Viewable! { get }  // set weak reference
+    var view: Viewable! { get }
 
+    func dismiss(animated: Bool)
     func dismiss(animated: Bool, completion: @escaping (() -> Void))
     func pop(animated: Bool)
 }
 
 extension Routerable {
+    func dismiss(animated: Bool) {
+        view.dismiss(animated: animated)
+    }
+
     func dismiss(animated: Bool, completion: @escaping (() -> Void)) {
-        view.dismiss(animated: animated, completion: {})
+        view.dismiss(animated: animated, _completion: completion)
     }
 
     func pop(animated: Bool) {
         view.pop(animated: animated)
     }
 }
+
 ```
 
 Example
