@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Add Data for Enrty
 struct ListEntryModel {
     let rowCount: Int
     init(rowCount: Int = 100) {

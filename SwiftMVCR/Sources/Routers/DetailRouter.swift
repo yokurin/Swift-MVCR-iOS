@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Add Data for Entry
 struct DetailEntryModel {
     var count: Count
     init(count: Count) {
@@ -36,9 +35,6 @@ final class DetailRouterOutput: Routerable {
         self.view = view
     }
 
-    func transitionToDetail(Model: AnyObject) {
-        let detail = UIViewController()
-        view.push(detail, animated: true)
-    }
+    // nop
 }
 
