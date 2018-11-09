@@ -18,6 +18,7 @@ final class ListViewController: UIViewController, Controllerable {
     }
 
     // MARK: Properties
+    @IBOutlet weak private var closeButton: UIButton!
     @IBOutlet weak private var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -30,6 +31,11 @@ final class ListViewController: UIViewController, Controllerable {
 
     internal var detailModel: DetailEntryModel! // Using when backed from Detail
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        closeButton.isHidden = navigationController?.viewControllers.count != 1
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let Model = detailModel {
@@ -37,8 +43,8 @@ final class ListViewController: UIViewController, Controllerable {
         }
     }
 
-    @IBAction func onPopButtonTapped(_ sender: Any) {
-        router.pop(animated: true)
+    @IBAction func onCloseButtonTapped(_ sender: Any) {
+        router.dismiss(animated: true)
     }
 
 }

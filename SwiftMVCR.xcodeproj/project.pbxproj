@@ -25,6 +25,7 @@
 		AEBF57B921944CB30071A253 /* CountDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57B821944CB30071A253 /* CountDisplayView.swift */; };
 		AEBF57BC21944CC40071A253 /* CountDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57BB21944CC30071A253 /* CountDisplayView.xib */; };
 		AEBF57BE21944D670071A253 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57BD21944D670071A253 /* XibView.swift */; };
+		AED179C22195487F0000127C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179C12195487F0000127C /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		AEBF57B821944CB30071A253 /* CountDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDisplayView.swift; sourceTree = "<group>"; };
 		AEBF57BB21944CC30071A253 /* CountDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDisplayView.xib; sourceTree = "<group>"; };
 		AEBF57BD21944D670071A253 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		AED179C12195487F0000127C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
 				AEBF57892192C1B40071A253 /* ViewController.swift */,
 				AEBF578B2192C1B40071A253 /* Main.storyboard */,
+				AED179C0219548710000127C /* Apis */,
 				AEBF57A42192E6D60071A253 /* Protocols */,
 				AEBF579A2192E6070071A253 /* Models */,
 				AEBF57B721944C5A0071A253 /* Views */,
@@ -181,6 +184,14 @@
 				AED179BB21952A290000127C /* Routers */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		AED179C0219548710000127C /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				AED179C12195487F0000127C /* Api.swift */,
+			);
+			path = Apis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */,
 				AEBF57B921944CB30071A253 /* CountDisplayView.swift in Sources */,
 				AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */,
+				AED179C22195487F0000127C /* Api.swift in Sources */,
 				AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */,
 				AEBF578A2192C1B40071A253 /* ViewController.swift in Sources */,
 				AEBF57882192C1B30071A253 /* AppDelegate.swift in Sources */,

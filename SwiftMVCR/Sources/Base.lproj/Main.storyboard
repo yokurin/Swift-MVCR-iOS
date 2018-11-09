@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uku-PX-rDI">
-                                <rect key="frame" x="130" y="350.5" width="115" height="30"/>
-                                <state key="normal" title="Push List Screen"/>
-                                <connections>
-                                    <action selector="pushListScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Wf-X0-K8z"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-eS-vvT">
+                                <rect key="frame" x="120.5" y="320.5" width="134" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uku-PX-rDI">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="30"/>
+                                        <state key="normal" title="Push List Screen"/>
+                                        <connections>
+                                            <action selector="pushListScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Wf-X0-K8z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-zB-T0k">
+                                        <rect key="frame" x="0.0" y="60" width="134" height="30"/>
+                                        <state key="normal" title="Present List Screen"/>
+                                        <connections>
+                                            <action selector="presentListScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZw-dK-BGe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uku-PX-rDI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MHb-zq-2GT"/>
-                            <constraint firstItem="uku-PX-rDI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aF5-sO-rzn"/>
+                            <constraint firstItem="fZh-eS-vvT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5jD-9x-bB9"/>
+                            <constraint firstItem="fZh-eS-vvT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aez-e2-Ole"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

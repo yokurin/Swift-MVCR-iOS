@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="SwiftMVCR" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="WYH-ME-hAO" id="Cig-Tm-V7b"/>
                 <outlet property="tableView" destination="lOK-k5-euQ" id="ihe-bZ-hOC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,23 +26,23 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYH-ME-hAO">
-                    <rect key="frame" x="20" y="597" width="60" height="60"/>
+                    <rect key="frame" x="20" y="607" width="50" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.64705882349999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="WYH-ME-hAO" secondAttribute="height" id="H4V-6e-nl2"/>
-                        <constraint firstAttribute="width" constant="60" id="nM1-sy-J4D"/>
+                        <constraint firstAttribute="width" constant="50" id="nM1-sy-J4D"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="←Pop">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Dismiss">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="30"/>
+                            <integer key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onPopButtonTapped:" destination="-1" eventType="touchUpInside" id="ALg-gN-EUc"/>
+                        <action selector="onCloseButtonTapped:" destination="-1" eventType="touchUpInside" id="0ds-Ne-mYJ"/>
                     </connections>
                 </button>
             </subviews>

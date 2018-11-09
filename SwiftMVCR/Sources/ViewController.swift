@@ -14,6 +14,9 @@ final class ViewController: UIViewController {
         ListRouterInput().push(from: self, entryModel: ListEntryModel(rowCount: 1000))
     }
 
+    @IBAction func presentListScreen(_ sender: UIButton) {
+        ListRouterInput().present(from: self, entryModel: ListEntryModel(rowCount: 10))
+    }
 }
 
 extension ViewController: Viewable {}

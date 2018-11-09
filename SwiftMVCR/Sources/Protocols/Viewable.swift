@@ -16,7 +16,7 @@ protocol Viewable: AnyObject {
     func present(_ vc: UIViewController, animated: Bool)
     func pop(animated: Bool)
     func dismiss(animated: Bool)
-    func dismiss(animated: Bool, completion: @escaping (() -> Void))
+    func dismiss(animated: Bool, _completion: @escaping (() -> Void))
 }
 
 extension Viewable where Self: UIViewController {
@@ -37,7 +37,7 @@ extension Viewable where Self: UIViewController {
         self.dismiss(animated: animated, completion: nil)
     }
 
-    func dismiss(animated: Bool, completion: @escaping (() -> Void)) {
-        self.dismiss(animated: animated, completion: completion)
+    func dismiss(animated: Bool, _completion: @escaping (() -> Void)) {
+        self.dismiss(animated: animated, completion: _completion)
     }
 }

@@ -23,7 +23,8 @@ final class ListRouterInput {
 
     func present(from: Viewable, entryModel: ListEntryModel) {
         let controller = ListViewController.configure(entryModel: entryModel)
-        from.present(controller, animated: true)
+        let navController = UINavigationController(rootViewController: controller)
+        from.present(navController, animated: true)
     }
 }
 
