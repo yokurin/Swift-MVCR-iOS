@@ -7,8 +7,7 @@ SwiftMVCR is an sample iOS App written in Swift using the MVCR architecture.  (M
 ## Description
 
 MVCR means Model, View, Controller, Router.   
-You can easy to know transitions of app.  
-But, Not testable Architecture
+You can easy to know transitions of app. But, Not testable Architecture
 
 ### Model
 Model must implement Modelable.
