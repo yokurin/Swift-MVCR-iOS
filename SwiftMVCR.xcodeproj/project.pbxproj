@@ -80,27 +80,20 @@
 		AEBF57862192C1B30071A253 /* SwiftMVCR */ = {
 			isa = PBXGroup;
 			children = (
-				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
-				AEBF57892192C1B40071A253 /* ViewController.swift */,
-				AEBF57A42192E6D60071A253 /* Protocols */,
-				AEBF579A2192E6070071A253 /* Models */,
-				AEBF57B721944C5A0071A253 /* Views */,
-				AEBF579B2192E6110071A253 /* ViewControllers */,
-				AED179BB21952A290000127C /* Routers */,
-				AEBF57992192E5F20071A253 /* Resources */,
+				AED179BC219534B90000127C /* Sources */,
+				AEBF57992192E5F20071A253 /* Support Files */,
 			);
 			path = SwiftMVCR;
 			sourceTree = "<group>";
 		};
-		AEBF57992192E5F20071A253 /* Resources */ = {
+		AEBF57992192E5F20071A253 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEBF578B2192C1B40071A253 /* Main.storyboard */,
 				AEBF578E2192C1B50071A253 /* Assets.xcassets */,
 				AEBF57902192C1B50071A253 /* LaunchScreen.storyboard */,
 				AEBF57932192C1B50071A253 /* Info.plist */,
 			);
-			path = Resources;
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		AEBF579A2192E6070071A253 /* Models */ = {
@@ -173,6 +166,21 @@
 				AEBF57B1219404CC0071A253 /* DetailRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		AED179BC219534B90000127C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
+				AEBF57892192C1B40071A253 /* ViewController.swift */,
+				AEBF578B2192C1B40071A253 /* Main.storyboard */,
+				AEBF57A42192E6D60071A253 /* Protocols */,
+				AEBF579A2192E6070071A253 /* Models */,
+				AEBF57B721944C5A0071A253 /* Views */,
+				AEBF579B2192E6110071A253 /* ViewControllers */,
+				AED179BB21952A290000127C /* Routers */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,12 +416,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BE69EUEJNJ;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yokurin.SwiftMVCR;
+				PRODUCT_BUNDLE_IDENTIFIER = app.yokurin.SwiftMVCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,12 +434,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BE69EUEJNJ;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftMVCR/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yokurin.SwiftMVCR;
+				PRODUCT_BUNDLE_IDENTIFIER = app.yokurin.SwiftMVCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
