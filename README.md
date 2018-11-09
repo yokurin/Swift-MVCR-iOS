@@ -103,7 +103,7 @@ Router must implement Routerable.
 
 ```swift
 protocol Routerable {
-    var view: Viewable! { get }
+    var view: Viewable! { get }  // set weak reference
 
     func dismiss(animated: Bool, completion: @escaping (() -> Void))
     func pop(animated: Bool)
