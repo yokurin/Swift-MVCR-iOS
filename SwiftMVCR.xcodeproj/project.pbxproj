@@ -31,7 +31,18 @@
 		AED179CB2195874C0000127C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CA2195874C0000127C /* ListModel.swift */; };
 		AED179CD21958BE40000127C /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CC21958BE40000127C /* Modelable.swift */; };
 		AED179CF21958C270000127C /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CE21958C270000127C /* DetailModel.swift */; };
+		AED17A0721959B7E0000127C /* SwiftMVCRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A0621959B7E0000127C /* SwiftMVCRTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AED17A0921959B7E0000127C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEBF577C2192C1B30071A253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEBF57832192C1B30071A253;
+			remoteInfo = SwiftMVCR;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AEBF57842192C1B30071A253 /* SwiftMVCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMVCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +71,20 @@
 		AED179CA2195874C0000127C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		AED179CC21958BE40000127C /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		AED179CE21958C270000127C /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		AED17A0421959B7E0000127C /* SwiftMVCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMVCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED17A0621959B7E0000127C /* SwiftMVCRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMVCRTests.swift; sourceTree = "<group>"; };
+		AED17A0821959B7E0000127C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AEBF57812192C1B30071A253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED17A0121959B7E0000127C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AEBF57862192C1B30071A253 /* SwiftMVCR */,
+				AED17A0521959B7E0000127C /* SwiftMVCRTests */,
 				AEBF57852192C1B30071A253 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AEBF57842192C1B30071A253 /* SwiftMVCR.app */,
+				AED17A0421959B7E0000127C /* SwiftMVCRTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +256,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		AED17A0521959B7E0000127C /* SwiftMVCRTests */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A0621959B7E0000127C /* SwiftMVCRTests.swift */,
+				AED17A0821959B7E0000127C /* Info.plist */,
+			);
+			path = SwiftMVCRTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +285,24 @@
 			productReference = AEBF57842192C1B30071A253 /* SwiftMVCR.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AED17A0321959B7E0000127C /* SwiftMVCRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED17A0D21959B7E0000127C /* Build configuration list for PBXNativeTarget "SwiftMVCRTests" */;
+			buildPhases = (
+				AED17A0021959B7E0000127C /* Sources */,
+				AED17A0121959B7E0000127C /* Frameworks */,
+				AED17A0221959B7E0000127C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED17A0A21959B7E0000127C /* PBXTargetDependency */,
+			);
+			name = SwiftMVCRTests;
+			productName = SwiftMVCRTests;
+			productReference = AED17A0421959B7E0000127C /* SwiftMVCRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,6 +315,10 @@
 				TargetAttributes = {
 					AEBF57832192C1B30071A253 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					AED17A0321959B7E0000127C = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = AEBF57832192C1B30071A253;
 					};
 				};
 			};
@@ -282,6 +336,7 @@
 			projectRoot = "";
 			targets = (
 				AEBF57832192C1B30071A253 /* SwiftMVCR */,
+				AED17A0321959B7E0000127C /* SwiftMVCRTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +352,13 @@
 				AEBF57BC21944CC40071A253 /* CountDisplayView.xib in Resources */,
 				AEBF579F2192E64E0071A253 /* ListViewController.xib in Resources */,
 				AEBF578D2192C1B40071A253 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED17A0221959B7E0000127C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +390,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AED17A0021959B7E0000127C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED17A0721959B7E0000127C /* SwiftMVCRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AED17A0A21959B7E0000127C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEBF57832192C1B30071A253 /* SwiftMVCR */;
+			targetProxy = AED17A0921959B7E0000127C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AEBF578B2192C1B40071A253 /* Main.storyboard */ = {
@@ -502,6 +580,46 @@
 			};
 			name = Release;
 		};
+		AED17A0B21959B7E0000127C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BE69EUEJNJ;
+				INFOPLIST_FILE = SwiftMVCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.yokurin.SwiftMVCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMVCR.app/SwiftMVCR";
+			};
+			name = Debug;
+		};
+		AED17A0C21959B7E0000127C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BE69EUEJNJ;
+				INFOPLIST_FILE = SwiftMVCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.yokurin.SwiftMVCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMVCR.app/SwiftMVCR";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,6 +637,15 @@
 			buildConfigurations = (
 				AEBF57972192C1B50071A253 /* Debug */,
 				AEBF57982192C1B50071A253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED17A0D21959B7E0000127C /* Build configuration list for PBXNativeTarget "SwiftMVCRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED17A0B21959B7E0000127C /* Debug */,
+				AED17A0C21959B7E0000127C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
