@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// Not just View like UIView and SubView of UIView.
+// Viewable equal UIViewController
 protocol Viewable: AnyObject {
     func push(_ vc: UIViewController, animated: Bool)
     func present(_ vc: UIViewController, animated: Bool)
