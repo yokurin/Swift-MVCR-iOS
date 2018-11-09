@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol Modelable {}
+protocol Modelable {
+    // nop
+}
