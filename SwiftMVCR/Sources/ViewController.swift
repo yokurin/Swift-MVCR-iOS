@@ -11,11 +11,11 @@ import UIKit
 final class ViewController: UIViewController {
 
     @IBAction func pushListScreen(_ sender: UIButton) {
-        ListRouterInput().push(from: self, entryModel: ListEntryModel(rowCount: 1000))
+        ListRouterInput().push(from: self, entryModel: ListEntryModel())
     }
 
     @IBAction func presentListScreen(_ sender: UIButton) {
-        ListRouterInput().present(from: self, entryModel: ListEntryModel(rowCount: 10))
+        ListRouterInput().present(from: self, entryModel: ListEntryModel())
     }
 }
 

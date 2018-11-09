@@ -11,7 +11,9 @@ import UIKit
 
 protocol Controllerable {
     // associatedtype Controller: UIViewController = Self
+    associatedtype M: Modelable
     associatedtype R: Routerable
+    var model: M! { get }
     var router: R! { get }
     // static func configure() -> Controller
 }

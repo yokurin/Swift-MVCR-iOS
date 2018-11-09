@@ -9,9 +9,9 @@
 import UIKit
 
 struct DetailEntryModel {
-    var count: Count
-    init(count: Count) {
-        self.count = count
+    var gitHubRepository: GitHubRepository
+    init(gitHubRepository: GitHubRepository) {
+        self.gitHubRepository = gitHubRepository
     }
 }
 

@@ -17,7 +17,6 @@
 		AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A02192E6680071A253 /* ListRouter.swift */; };
 		AEBF57A32192E6CA0071A253 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A22192E6CA0071A253 /* Viewable.swift */; };
 		AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A52192E8DB0071A253 /* Controllerable.swift */; };
-		AEBF57A82192F93D0071A253 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A72192F93D0071A253 /* Count.swift */; };
 		AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57A92192F96A0071A253 /* Routerable.swift */; };
 		AEBF57AF219404B80071A253 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57AD219404B80071A253 /* DetailViewController.swift */; };
 		AEBF57B0219404B80071A253 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57AE219404B80071A253 /* DetailViewController.xib */; };
@@ -26,6 +25,12 @@
 		AEBF57BC21944CC40071A253 /* CountDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBF57BB21944CC30071A253 /* CountDisplayView.xib */; };
 		AEBF57BE21944D670071A253 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF57BD21944D670071A253 /* XibView.swift */; };
 		AED179C22195487F0000127C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179C12195487F0000127C /* Api.swift */; };
+		AED179C4219556BB0000127C /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179C3219556BB0000127C /* GithubRepository.swift */; };
+		AED179C6219557040000127C /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179C5219557040000127C /* GitHubApi.swift */; };
+		AED179C821956DF30000127C /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179C721956DF30000127C /* CollectionExtension.swift */; };
+		AED179CB2195874C0000127C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CA2195874C0000127C /* ListModel.swift */; };
+		AED179CD21958BE40000127C /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CC21958BE40000127C /* Modelable.swift */; };
+		AED179CF21958C270000127C /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED179CE21958C270000127C /* DetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +46,6 @@
 		AEBF57A02192E6680071A253 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		AEBF57A22192E6CA0071A253 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
 		AEBF57A52192E8DB0071A253 /* Controllerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllerable.swift; sourceTree = "<group>"; };
-		AEBF57A72192F93D0071A253 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		AEBF57A92192F96A0071A253 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
 		AEBF57AD219404B80071A253 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AEBF57AE219404B80071A253 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -50,6 +54,12 @@
 		AEBF57BB21944CC30071A253 /* CountDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDisplayView.xib; sourceTree = "<group>"; };
 		AEBF57BD21944D670071A253 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		AED179C12195487F0000127C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		AED179C3219556BB0000127C /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		AED179C5219557040000127C /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
+		AED179C721956DF30000127C /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		AED179CA2195874C0000127C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		AED179CC21958BE40000127C /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
+		AED179CE21958C270000127C /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,18 +111,19 @@
 		AEBF579A2192E6070071A253 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AEBF57A72192F93D0071A253 /* Count.swift */,
+				AED179D021958F6A0000127C /* Api */,
+				AED179D121958F710000127C /* Controllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AEBF579B2192E6110071A253 /* ViewControllers */ = {
+		AEBF579B2192E6110071A253 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AEBF57AB2194047E0071A253 /* List */,
 				AEBF57AC2194048F0071A253 /* Detail */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AEBF57A42192E6D60071A253 /* Protocols */ = {
@@ -121,6 +132,7 @@
 				AEBF57A22192E6CA0071A253 /* Viewable.swift */,
 				AEBF57A52192E8DB0071A253 /* Controllerable.swift */,
 				AEBF57A92192F96A0071A253 /* Routerable.swift */,
+				AED179CC21958BE40000127C /* Modelable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -176,11 +188,12 @@
 				AEBF57872192C1B30071A253 /* AppDelegate.swift */,
 				AEBF57892192C1B40071A253 /* ViewController.swift */,
 				AEBF578B2192C1B40071A253 /* Main.storyboard */,
+				AED179C921956DF60000127C /* Extensions */,
 				AED179C0219548710000127C /* Apis */,
 				AEBF57A42192E6D60071A253 /* Protocols */,
 				AEBF579A2192E6070071A253 /* Models */,
 				AEBF57B721944C5A0071A253 /* Views */,
-				AEBF579B2192E6110071A253 /* ViewControllers */,
+				AEBF579B2192E6110071A253 /* Controllers */,
 				AED179BB21952A290000127C /* Routers */,
 			);
 			path = Sources;
@@ -190,8 +203,34 @@
 			isa = PBXGroup;
 			children = (
 				AED179C12195487F0000127C /* Api.swift */,
+				AED179C5219557040000127C /* GitHubApi.swift */,
 			);
 			path = Apis;
+			sourceTree = "<group>";
+		};
+		AED179C921956DF60000127C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AED179C721956DF30000127C /* CollectionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AED179D021958F6A0000127C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				AED179C3219556BB0000127C /* GithubRepository.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		AED179D121958F710000127C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AED179CA2195874C0000127C /* ListModel.swift */,
+				AED179CE21958C270000127C /* DetailModel.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,18 +308,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBF57AF219404B80071A253 /* DetailViewController.swift in Sources */,
+				AED179CD21958BE40000127C /* Modelable.swift in Sources */,
 				AEBF57AA2192F96A0071A253 /* Routerable.swift in Sources */,
-				AEBF57A82192F93D0071A253 /* Count.swift in Sources */,
+				AED179C6219557040000127C /* GitHubApi.swift in Sources */,
 				AEBF57A12192E6680071A253 /* ListRouter.swift in Sources */,
 				AEBF57B921944CB30071A253 /* CountDisplayView.swift in Sources */,
+				AED179CF21958C270000127C /* DetailModel.swift in Sources */,
 				AEBF57A62192E8DB0071A253 /* Controllerable.swift in Sources */,
 				AED179C22195487F0000127C /* Api.swift in Sources */,
+				AED179C4219556BB0000127C /* GithubRepository.swift in Sources */,
 				AEBF57B2219404CC0071A253 /* DetailRouter.swift in Sources */,
 				AEBF578A2192C1B40071A253 /* ViewController.swift in Sources */,
 				AEBF57882192C1B30071A253 /* AppDelegate.swift in Sources */,
 				AEBF579E2192E64E0071A253 /* ListViewController.swift in Sources */,
+				AED179C821956DF30000127C /* CollectionExtension.swift in Sources */,
 				AEBF57BE21944D670071A253 /* XibView.swift in Sources */,
 				AEBF57A32192E6CA0071A253 /* Viewable.swift in Sources */,
+				AED179CB2195874C0000127C /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

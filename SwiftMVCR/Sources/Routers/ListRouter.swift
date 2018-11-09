@@ -8,12 +8,7 @@
 
 import UIKit
 
-struct ListEntryModel {
-    let rowCount: Int
-    init(rowCount: Int = 100) {
-        self.rowCount = rowCount
-    }
-}
+struct ListEntryModel {}
 
 final class ListRouterInput {
     func push(from: Viewable, entryModel: ListEntryModel) {

@@ -32,8 +32,8 @@
                         <constraint firstAttribute="width" secondItem="WYH-ME-hAO" secondAttribute="height" id="H4V-6e-nl2"/>
                         <constraint firstAttribute="width" constant="50" id="nM1-sy-J4D"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Dismiss">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                    <state key="normal" title="×">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>

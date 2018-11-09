@@ -23,6 +23,8 @@ public enum HttpMethod: String {
 
 /// リクエスト情報プロトコル
 public protocol RequestDto {
+
+    var url: String { get }
     /// パラメータ配列取得
     /// - Returns: パラメータ配列 同じkey名で複数つける場合がある為、辞書型ではなく独自型配列としています
     func params() -> [(key: String, value: String)]
@@ -30,7 +32,7 @@ public protocol RequestDto {
 
 //APIリクエストプロトコル
 protocol ApiProtocol {
-    func request(_ httpMethod: HttpMethod, url: String, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void)
+    func request(_ httpMethod: HttpMethod, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void)
 }
 
 /// NSURLSessionTaskを作ってHTTP通信を行うクラスです。
@@ -54,16 +56,16 @@ open class ApiTask: ApiProtocol {
 
     public init() {}
 
-    public func request(_ httpMethod: HttpMethod, url: String, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void) {
+    public func request(_ httpMethod: HttpMethod, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void) {
         let urlRequest = URLRequestCreator.create(httpMethod: httpMethod,
-                                                 url: url,
                                                  dto: dto,
                                                  header: httpHeader,
                                                  timeoutInterval: timeoutInterval,
                                                  cachePolicy: cachePolicy)
         let task = ApiTask.apiTaskSession.dataTask(with: urlRequest, completionHandler: {(data, response, error) in
             #if DEBUG
-            self.debugResponse(with: urlRequest, data: data, response: response)
+            // Warning: print is very slow speed so comment out default
+            //self.debugResponse(with: urlRequest, data: data, response: response)
             #endif
 
             if let error = error {
@@ -83,22 +85,10 @@ open class ApiTask: ApiProtocol {
         task.resume()
     }
 
-    // MARK: - エラーチェック
-
-    /// エラー生成します
-    ///
-    /// - Parameters:
-    ///   - code: ApiError
-    ///   - info: 追加情報
-    /// - Returns: NSError
     static func createError(_ code: ApiError, _ info: [String: Any]?) -> NSError {
         return NSError(domain: "ApiError", code: code.rawValue, userInfo: info)
     }
 
-    /// レスポンスデータチェックをします
-    ///
-    /// - Parameter response: レスポンスデータ
-    /// - Returns: エラーの場合はNSError 正常系はnil
     static internal func check(response: URLResponse?) -> NSError? {
         guard let notNilResponse = response else {
             return createError(.recieveNilResponse, nil)
@@ -111,12 +101,6 @@ open class ApiTask: ApiProtocol {
         return nil
     }
 
-    // MARK: - ログ
-
-    /// URLResponseのログ出力
-    /// - parameter urlRequest  : 出力するURLResponse
-    /// - parameter data        : 出力するdata
-    /// - parameter response    : 出力するURLResponse
     private func debugResponse(with urlRequest: URLRequest, data: Data?, response: URLResponse?) {
         print(#file, #function)
         let res: [String] = [
@@ -132,12 +116,9 @@ open class ApiTask: ApiProtocol {
     }
 }
 
-
-
 public class URLRequestCreator {
 
     static func create(httpMethod: HttpMethod,
-                              url: String,
                               dto: RequestDto,
                               header: [String: String]?,
                               timeoutInterval: TimeInterval,
@@ -153,9 +134,9 @@ public class URLRequestCreator {
             }
         }
         if httpMethod == .get {
-            urlRequest.url = URL(string: appendGetParameter(url: url, parameter: URLEncoder.encode(dto.params())))
+            urlRequest.url = URL(string: appendGetParameter(url: dto.url, parameter: URLEncoder.encode(dto.params())))
         } else {
-            urlRequest.url = URL(string: url)
+            urlRequest.url = URL(string: dto.url)
             urlRequest.httpBody = URLEncoder.encode(dto.params()).data(using: String.Encoding.utf8, allowLossyConversion: false)
         }
         #if DEBUG
