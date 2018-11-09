@@ -8,7 +8,7 @@ SwiftMVCR is an sample iOS App written in Swift using the MVCR architecture.  (M
 
 <img src="./READMEResources/SwiftMVCR_Demo.gif" width="45%"><img src="./READMEResources/ProjectTree.png" width="45%">
 
-**Architecture**  
+#### Architecture
 <img src="./READMEResources/graph.jpg" width="80%">
 
 
