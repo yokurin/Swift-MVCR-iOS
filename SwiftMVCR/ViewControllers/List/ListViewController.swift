@@ -28,7 +28,7 @@ final class ListViewController: UIViewController, Controllerable {
     private var entryModel: ListEntryModel!
     private(set) var router: ListRouterOutput!
 
-    var detailModel: DetailEntryModel! // Using when backed from Detail
+    internal var detailModel: DetailEntryModel! // Using when backed from Detail
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

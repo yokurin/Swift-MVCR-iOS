@@ -1,6 +1,6 @@
 # SwiftMVCR (Model, View, Controller, Router)
 
-SwiftMVCR is an example iOS App written in Swift using the MVCR architecture.  (Model, View, Controller, Router)
+SwiftMVCR is an sample iOS App written in Swift using the MVCR architecture.  (Model, View, Controller, Router)
 
 [![Language](https://img.shields.io/badge/language-Swift%204.2-orange.svg)](https://swift.org)
 
@@ -152,7 +152,9 @@ final class RouterOutput: Routerable {
 }
 ```
 
+### Unit Test 
 
+WIP ... 
 
 
 ## Requirements
