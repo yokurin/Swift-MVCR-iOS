@@ -11,6 +11,15 @@ SwiftMVCR is an sample iOS App written in Swift using the MVCR architecture.  (M
 ### Architecture
 <img src="./READMEResources/diagram.jpg" width="100%">
 
+### Run Sample 
+1. Clone this repository.
+    ```
+    git clone git@github.com:yokurin/Swift-MVCR-iOS.git
+    ```
+
+2. Open `SwiftMVCR.xcodeproj` in Xcode. 
+
+3. Run
 
 ## Description
 
@@ -38,7 +47,7 @@ final class Model: Modelable {
 
 ### View (including UIViewController)
 View must implement Viewable. Viewable has Default Extension.  
-※ View of this case is not just View like UIView etc.
+※ View is not just View like UIView etc in this case.
 
 ```swift
 
@@ -108,12 +117,12 @@ final class ViewController: UIViewController, Controllerable {
     static func configure(entryModel: EntryModel) -> ViewController {
         let controller = ViewController()
         controller.router = RouterOutput(controller)
-        controller.entryModel = entryModel
+        controller.model = Model(entryModel: entryModel)
         return controller
     }
-    private(set) var model: ListModel!
-    private(set) var router: RouterOutput!
     
+    private(set) var model: Model!
+    private(set) var router: RouterOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,14 +204,13 @@ WIP ...
 
 ## Requirements
 
-- iOS 10.0+
 - Xcode 10.0+
 - Swift 4.2+
 
 ## Installation
 
 ```
-git clone git@github.com:yokurin/SwiftMVCR.git
+git clone git@github.com:yokurin/Swift-MVCR-iOS.git
 ```
 
 ## Author
