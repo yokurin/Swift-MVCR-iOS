@@ -90,7 +90,7 @@ extension ListViewController: UIScrollViewDelegate {
             self?.tableView.indexPath(for: $0)
         }.last
         guard visibleLastIndexPath?.row ?? 0 >= model.gitHubRepositories.count - 2 else { return }
-        guard model.pageCount < 5 else { return }   // limit GitHub Api https://developer.github.com/v3/search/#search-repositories
+        guard !model.isFetching, model.pageCount < 5 else { return }   // limit GitHub Api https://developer.github.com/v3/search/#search-repositories
         model.fetch()
     }
 }

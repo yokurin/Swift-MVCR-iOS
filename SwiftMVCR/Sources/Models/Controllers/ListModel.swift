@@ -21,18 +21,22 @@ final class ListModel: Modelable {
 
     var gitHubRepositories: [GitHubRepository] = []
     var pageCount = 1
+    var isFetching = false
 
     init(entryModel: ListEntryModel) {
         self.entryModel = entryModel
     }
 
     func fetch() {
+        isFetching = true
         GitHubApiSevice.Search().do(with: "Swift", page: pageCount, onSuccess: { [weak self] res in
+            self?.isFetching = false
             self?.gitHubRepositories += res.items
             self?.pageCount += 1
             self?.delegate?.onSuccessSearch()
             //print(res)
         }) { [weak self] error in
+            self?.isFetching = false
             self?.delegate?.onErrorSearch(error: error)
             //print(error)
         }
