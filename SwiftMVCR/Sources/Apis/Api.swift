@@ -10,10 +10,10 @@ import Foundation
 
 /// Api通信エラーコード
 public enum ApiError: Int, Error {
-    case recieveNilResponse = 0,    // レスポンスエラー
-    recieveErrorHttpStatus,         // HTTPステータス
-    recieveNilBody,                 // nilデータ
-    failedParse                     // パースエラー
+    case recieveNilResponse = 0,
+    recieveErrorHttpStatus,
+    recieveNilBody,
+    failedParse
 }
 
 public enum HttpMethod: String {
@@ -21,37 +21,21 @@ public enum HttpMethod: String {
     case post = "POST"
 }
 
-/// リクエスト情報プロトコル
 public protocol RequestDto {
 
     var url: String { get }
-    /// パラメータ配列取得
-    /// - Returns: パラメータ配列 同じkey名で複数つける場合がある為、辞書型ではなく独自型配列としています
     func params() -> [(key: String, value: String)]
 }
 
-//APIリクエストプロトコル
 protocol ApiProtocol {
     func request(_ httpMethod: HttpMethod, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void)
 }
 
-/// NSURLSessionTaskを作ってHTTP通信を行うクラスです。
-/// RequestDtoでパラメータを指定し、受信後に指定parserでパースしてentityを返却します。
-/// GETの場合はパラメータを指定URLに追加、POSTの場合はDataに変換しbodyに設定します。
-/// POSTの場合にGET情報も付与したい場合は、URLにあらかじめ付与しておいて下さい。
 open class ApiTask: ApiProtocol {
 
-    // MARK: - PubricParams
-    /// HTTPHeader[ヘッダフィールド名: 対応する値]を記述する。
-    /// よく使う値をdefaultとしている為、不要な場合はnilで上書きして下さい。
     public var httpHeader: [String: String]? = ["content-type": "application/json"]
-    /// timeoutの時間
-    /// default: 60
     public var timeoutInterval: TimeInterval = 60
-    /// キャッシュ設定
-    /// default: reloadIgnoringLocalCacheData(使用しない)
     public var cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalCacheData
-    /// 通信中のセッション
     static let apiTaskSession: URLSession = URLSession(configuration: URLSessionConfiguration.ephemeral)
 
     public init() {}
