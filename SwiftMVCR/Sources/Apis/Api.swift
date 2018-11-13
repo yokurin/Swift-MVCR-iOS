@@ -8,7 +8,6 @@
 
 import Foundation
 
-/// Api通信エラーコード
 public enum ApiError: Int, Error {
     case recieveNilResponse = 0,
     recieveErrorHttpStatus,
@@ -22,7 +21,6 @@ public enum HttpMethod: String {
 }
 
 public protocol RequestDto {
-
     var url: String { get }
     func params() -> [(key: String, value: String)]
 }
